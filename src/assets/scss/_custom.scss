@@ -35,6 +35,7 @@
   background-color: rgba($primary, 0.05);
   border-radius: 9999px;
   filter: blur(48px);
+    pointer-events: none;
 }
 
 // pulse wave
