@@ -29,6 +29,27 @@ pnpm dev
 bun dev
 ```
 
+## Deploy no GitHub Pages
+
+Este projeto foi configurado para publicar em GitHub Pages de duas formas.
+
+### 1) Deploy manual (branch gh-pages)
+
+```bash
+npm run deploy
+```
+
+Esse comando gera a pasta `dist` e publica na branch `gh-pages`.
+
+### 2) Deploy automatico com GitHub Actions
+
+O workflow em `.github/workflows/deploy.yml` publica automaticamente a cada push na branch `main`.
+
+Depois, no GitHub:
+1. Abra `Settings` > `Pages`
+2. Em `Build and deployment`, selecione `Source: Deploy from a branch`
+3. Escolha a branch `gh-pages` e pasta `/ (root)`
+
 ## Author 
 ```
 Design and code is completely written by CodesCandy and development team. 

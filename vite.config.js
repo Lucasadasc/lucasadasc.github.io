@@ -3,10 +3,16 @@ import { resolve } from 'path'
 import glob from 'fast-glob'
 // Grab all HTML files inside src (including subfolders)
 const htmlFiles = glob.sync('./src/**/*.html')
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+const isUserPageRepo = repoName.endsWith('.github.io');
+const ghPagesBase = isGitHubActions
+  ? (isUserPageRepo ? '/' : `/${repoName}/`)
+  : './';
 
 
 export default defineConfig({
-   base: './',
+  base: ghPagesBase,
    root: resolve(__dirname, 'src'),   // ✅ keeps dev server working
    server: {
     host: true,
