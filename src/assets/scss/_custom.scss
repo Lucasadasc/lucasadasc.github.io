@@ -8,7 +8,7 @@
     background-color: transparent;
     box-shadow: none;
     transition: background-color 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease, -webkit-backdrop-filter 0.25s ease, padding 0.25s ease;
-    padding-block: 20px;
+    padding-block: 16px;
 }
 
 .site-header.is-scrolled {
@@ -16,8 +16,7 @@
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     box-shadow: 0 0.125rem 0.75rem rgba($black, 0.08);
-    padding-top: 0.35rem;
-    padding-bottom: 0.35rem;
+    padding-block: 16px;
 }
 
 .nav-link.active {
